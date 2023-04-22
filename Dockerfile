@@ -12,6 +12,6 @@ RUN apt-get update \
 COPY Movie_Data_Capture /jav
 
 RUN ( pip install --no-cache-dir -r requirements.txt || true ) \
-    && pip install --no-cache-dir requests lxml Beautifulsoup4 pillow \
+    && pip install --no-cache-dir requests lxml Beautifulsoup4 pillow
 
 CMD python /jav/AV_Data_Capture.py
