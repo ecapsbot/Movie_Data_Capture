@@ -14,11 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Checkout master
-        run: |
-          git checkout master
+      - uses: actions/checkout@v3
+        with:
+          repository: yoshiko2/Movie_Data_Capture
+          ref: master
 
       - name: Log in to the Container registry
         uses: docker/login-action@v1
